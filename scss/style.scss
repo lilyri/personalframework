@@ -6,8 +6,8 @@
 $color-text-body: rgba(0,0,0,.8);
 $color-text-headings: rgba(0,0,0,1);
 $color-accent: rgba(255,187,0);
-$color-accent-dark: rgba(204,157,30);
-$color-accent-darker: rgba(172,139,48);
+$color-link: rgba(28,133,7);
+$color-link-darker: rgba(19,92,4);
 $color-accent-light: rgb(255,202,202);
 
 
@@ -25,10 +25,10 @@ $breakpoint-large: 1250px;
 @import "partials/toc";
 @import "partials/typography";
 @import "partials/buttons";
-// @import "partials/media"; 
-// @import "partials/layout"; 
-// @import "partials/grid";
-// @import "partials/structure";
+@import "partials/media"; 
+@import "partials/layout"; 
+@import "partials/grid";
+@import "partials/structure";
 
 
 
