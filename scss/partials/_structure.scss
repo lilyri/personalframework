@@ -1,11 +1,13 @@
 /* SITE STRUCTURE */
 
 .site-header {
-    background: $color-accent-dark;
     padding: 1em;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
+    width: 100%;
+
 
     a {
         color: white;
@@ -56,9 +58,14 @@ section{
     background-color: black;
     text-align: center;
     padding: 6em 0;
+    color: white;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
 
     h1 {
         margin-bottom: 0.25em;
+        color: white;
     }
     p {
         margin: 1em auto;
