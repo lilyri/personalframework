@@ -39,6 +39,14 @@ body { color: $color-text-body; }
   /* LIMIT NUMBER OF CHARACTERS PER LINE */
   p { max-width: 45em; }
 
+  /* LINKS */
+  a {
+    color: $color-link;
+    &:hover {
+      color: $color-link-darker;
+    }
+  }
+
   /* HORIZONTAL LINE */
   hr {
     border: 0;
