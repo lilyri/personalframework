@@ -19,10 +19,20 @@
         margin: 0;
     }
     
+    .site-id {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo {
+        max-width: 40px;
+        margin-right: .5em;
+    }
 }
 
 /* SITE FOOTER */
 .site-footer {
+    background-color: black;
     display: flex;
     padding: 1em;
     justify-content: center;
@@ -48,8 +58,12 @@
     }
 }
 
-section{
+section {
     padding: 4em 0;
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+
 }
 
 
@@ -67,7 +81,5 @@ section{
         margin-bottom: 0.25em;
         color: white;
     }
-    p {
-        margin: 1em auto;
-    }
+
 }
