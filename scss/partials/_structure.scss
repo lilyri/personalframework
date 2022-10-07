@@ -74,12 +74,20 @@ section {
     padding: 6em 0;
     color: white;
     min-height: 100vh;
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+
+    .container {
+        // width: 100%;
+    }
 
     h1 {
         margin-bottom: 0.25em;
         color: white;
+    }
+
+    p {
+        margin: 1em 0;
     }
 
 }
