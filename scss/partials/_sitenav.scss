@@ -35,7 +35,7 @@
         transition: all .3s ease-out;
         }
 
-    &[data-navstate="close"]{
+    &[data-navstate="closed"] {
         ul {
             transform: translate(100%, 0%);
         }
