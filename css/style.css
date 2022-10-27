@@ -301,7 +301,7 @@ body {
 
 /* SITE FOOTER */
 .site-footer {
-  background-color: rgb(10, 6, 90);
+  background: rgb(10, 6, 90);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,6 +313,10 @@ body {
 .site-footer a {
   color: white;
   text-decoration: none;
+}
+
+.site-main {
+  overflow-x: hidden;
 }
 
 section {
@@ -364,7 +368,7 @@ section {
 }
 
 .site-header .site-nav ul {
-  background: pink;
+  background: red;
   position: fixed;
   top: 0;
   right: 0;
@@ -387,6 +391,7 @@ section {
           transform: translate(0, 0);
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  z-index: 100;
 }
 .site-header .site-nav[data-navstate=closed] ul {
   -webkit-transform: translate(100%, 0%);
@@ -433,6 +438,11 @@ section {
   -webkit-transition-delay: 0.9s;
           transition-delay: 0.9s;
 }
+.site-header .site-nav[data-navstate=open] .menu-button {
+  position: fixed;
+  top: 1.9em;
+  right: 1.5em;
+}
 .site-header .site-nav[data-navstate=open] li {
   opacity: 1;
   -webkit-transform: translate(0, 0);
@@ -447,8 +457,7 @@ section {
   border: none;
   color: white;
   padding: 0.7em;
-  position: relative;
-  z-index: 20;
+  z-index: 200;
 }
 .site-header .site-nav .menu-button svg {
   display: block;
@@ -619,12 +628,161 @@ section {
 }
 
 /* CSS ANIMATIONS */
-section[data-sectionstate=active] {
-  opacity: 1;
-  -webkit-transition: all 0.4s linear 0.5s;
-  transition: all 0.4s linear 0.5s;
+/* ANIMATE THE HERO ON LOAD */
+.hero h1 {
+  -webkit-animation-name: jd-scaleup;
+          animation-name: jd-scaleup;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+.hero p {
+  -webkit-animation-name: jd-scaleup;
+          animation-name: jd-scaleup;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+.hero .button-group a {
+  -webkit-animation-name: jd-scaleup;
+          animation-name: jd-scaleup;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+.hero .button-group a:nth-child(1) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+.hero .button-group a:nth-child(2) {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+.hero .button-group a:nth-child(3) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
-section[data-sectionstate=inactive] {
+@-webkit-keyframes jd-scaleup {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes jd-scaleup {
+  0% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+/* ANIMATE SECTION 1 ON SCROLL */
+#section1.scroll-triggered[data-sectionstate=inactive] .jd-contentblock-image {
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
   opacity: 0;
+}
+#section1.scroll-triggered[data-sectionstate=inactive] .jd-contentblock-text {
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
+  opacity: 0;
+}
+
+#section1.scroll-triggered[data-sectionstate=active] .jd-contentblock-image {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: all 1s ease-out 0.5s;
+  transition: all 1s ease-out 0.5s;
+}
+#section1.scroll-triggered[data-sectionstate=active] .jd-contentblock-text {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: all 1s ease-out 0.5s;
+  transition: all 1s ease-out 0.5s;
+}
+
+/* ANIMATE SECTION 2 ON SCROLL */
+#section2.scroll-triggered[data-sectionstate=inactive] {
+  background-color: #888;
+}
+#section2.scroll-triggered[data-sectionstate=inactive] .jd-contentblock-image {
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  opacity: 0;
+}
+#section2.scroll-triggered[data-sectionstate=inactive] .jd-contentblock-text {
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
+  opacity: 0;
+}
+
+#section2.scroll-triggered[data-sectionstate=active] {
+  background-color: #eee;
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+#section2.scroll-triggered[data-sectionstate=active] .jd-contentblock-image {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+#section2.scroll-triggered[data-sectionstate=active] .jd-contentblock-text {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+/* ANIMATE SECTION 3 ON SCROLL */
+#section3 .jd-contentblock-image {
+  position: relative;
+  margin-top: 4em;
+}
+
+#section3 .jd-character {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+#section3.scroll-triggered[data-sectionstate=inactive] .jd-character {
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+}
+
+#section3.scroll-triggered[data-sectionstate=active] .jd-character {
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 1s ease-out 0.5s;
+  transition: all 1s ease-out 0.5s;
 }

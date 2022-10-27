@@ -25,7 +25,7 @@
       </div>
       <h1 class="hide-visually"><a href="index.html">My Framework</a></h1>
     </div>
-    <nav class="site-nav" data="closed">
+    <nav class="site-nav" data-navstate="closed">
 
       <button class="menu-button">
         <div class="menu-button-text hide-visually">Menu</div>
@@ -48,87 +48,108 @@
 
     </nav>
   </header>
-
   <main class="site-main">
 
     <section class="hero">
-      <div class="container">
-        <h1>Personal Framework 2022</h1>
-        <p>This is a simple, single page website framework, built with SASS.</p>
-        <a href="#section01" class="button">Go to Section 1</a>
-        <a href="#section02" class="button">Go to Section 2</a>
-        <a href="#section03" class="button">Go to Section 3</a>
-      </div>
-    </section>
-
-    <section id="section01" data-sectionstate="active">
-      <div class="container">
-        
-        <div class="row">
-          <div class="one-half">
-            <img src="https://via.placeholder.com/1600x1200" alt="Placeholder">
-          </div>
-          <div class="one-half">
-            <h3>Heading 3</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, a amet. Velit, quos impedit illo doloremque quasi tempore quidem mollitia </p>
-            <a href="#" class="button">Button</a>
-          </div>
-        </div>     
-      </div>
-    </section>
-
-    <section id="section02" data-sectionstate="inactive">
-      <div class="container">
-        <div class="row swapped">
-          <div class="one-half">
-            <img src="https://via.placeholder.com/1600x1200" alt="Placeholder">
-          </div>
-          <div class="one-half">
-            <h3>Heading 3</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, a amet. Velit, quos impedit illo doloremque quasi tempore quidem mollitia </p>
-            <a href="#" class="button">Button</a>
-          </div>
+        <div class="container">
+            <h1>John Doe's Personal Framework 2022</h1>
+            <p>This is a simple, single page website, built with SASS.</p>
+            <div class="button-group">
+                <a href="#section1" class="button">Go to Section 1</a>
+                <a href="#section2" class="button">Go to Section 2</a>
+                <a href="#section3" class="button">Go to Section 3</a>
+            </div>
         </div>
-      </div>
     </section>
 
-    <section id="section03">
-      <div class="container">
+    <section id="section1" class="scroll-triggered">
+        <div class="container">
 
-        <div class="row stacked">
-          <div class="one-half">
-            <img src="https://via.placeholder.com/1600x1200" alt="Placeholder">
-          </div>
-          <div class="one-half">
-            <h3>Heading 3</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, a amet. Velit, quos impedit illo doloremque quasi tempore quidem mollitia </p>
-            <a href="#" class="button">Button</a>
-          </div>
+            <div class="row">
+                <div class="one-half jd-contentblock-image">
+                    <img src="https://via.placeholder.com/1600x1200" alt="Placeholder">
+                </div>
+                <div class="one-half jd-contentblock-text">
+                    <h3>Section 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ipsum dolor cupiditate,
+                        voluptatum dolore
+                        minus animi optio nam voluptatem sit ipsam qui expedita molestiae nobis.</p>
+                    <a href="#" class="button">Button</a>
+                </div>
+            </div>
+
         </div>
-      </div>
     </section>
 
-  </main>
+    <section id="section2" class="scroll-triggered">
+        <div class="container">
 
-  <footer class="site-footer">
+            <div class="row swapped">
+                <div class="one-half jd-contentblock-image">
+                    <img src="https://via.placeholder.com/1600x1200" alt="Placeholder">
+                </div>
+                <div class="one-half jd-contentblock-text">
+                    <h3>Section 2</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ipsum dolor cupiditate,
+                        voluptatum dolore
+                        minus animi optio nam voluptatem sit ipsam qui expedita molestiae nobis.</p>
+                    <a href="#" class="button">Button</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="section3" class="scroll-triggered">
+        <div class="container">
+
+            <div class="row stacked">
+                <div class="one-half jd-contentblock-image">
+                    <img src="https://via.placeholder.com/1600x1200" alt="Placeholder">
+                    <div class="jd-character">
+                        <svg height="100" width="100">
+                            <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="one-half">
+                    <h3>Section 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ipsum dolor cupiditate,
+                        voluptatum dolore
+                        minus animi optio nam voluptatem sit ipsam qui expedita molestiae nobis.</p>
+                    <a href="#" class="button">Button</a>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
     <nav class="site-nav">
-      <ul>
-        <li><a href="Subpage1/index.html">Sub Page 1</a></li>
-        <li><a href="subpage2/index.html">Sub Page 2</a></li>
-        <li><a href="subpage3/index.html">Sub Page 3</a></li>
-      </ul>
+        <ul>
+            <li><a href="subpage1/index.html">Sub Page 1</a></li>
+            <li><a href="subpage2/index.html">Sub Page 2</a></li>
+            <li><a href="subpage3/index.html">Sub Page 3</a></li>
+        </ul>
     </nav>
-  </footer>
+</footer>
 
-  <!--SMOOTH SCROLL BY CHRIS FERDINANDI https://github.com/cferdinandi/smooth-scroll-->
+<!-- SMOOTH SCROLL BY CHRIS FERDINANDI https://github.com/cferdinandi/smooth-scroll -->
+<script src="js/smooth-scroll.polyfills.min.js"></script>
+<script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 800,
+        speedAsDuration: true
+    });
+</script>
 
-  <script src="js/script.js"></script>
-  <script src="js/smooth-scroll.polyfills.min.js"></script>
-  <script>
-    var scroll = new SmoothScroll('a[href*="#"]');
-  </script>
+<!-- MAIN JS SCRIPT.JS -->
+<script src="js/script.js" defer></script>
 
-    <!-- <script src="js/script.js" /> -->
 </body>
 
 </html>
